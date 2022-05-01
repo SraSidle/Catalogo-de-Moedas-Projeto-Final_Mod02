@@ -1,0 +1,30 @@
+{
+  "name": "catalogo-de-moedas-projeto-final_mod02",
+  "version": "1.0.0",
+  "description": "Catálogo de Moedas com PostegresQL",
+  "main": "index.js",
+  "type":"module",
+  "scripts": {
+    "start": "node index.js",
+    "dev": "nodemon index.js -e ejs.css.html"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/SraSidle/Catalogo-de-Moedas-Projeto-Final_Mod02.git"
+  },
+  "keywords": [],
+  "author": "Bianca Aguiar",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/SraSidle/Catalogo-de-Moedas-Projeto-Final_Mod02/issues"
+  },
+  "homepage": "https://github.com/SraSidle/Catalogo-de-Moedas-Projeto-Final_Mod02#readme",
+  "dependencies": {
+    "dotenv": "^16.0.0",
+    "ejs": "^3.1.7",
+    "express": "^4.18.1"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.16"
+  }
+}
