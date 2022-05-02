@@ -1,12 +1,14 @@
 {
   "name": "catalogo-de-moedas-projeto-final_mod02",
   "version": "1.0.0",
-  "description": "Catálogo de Moedas com PostegresQL",
+  "description": "Catálogo de Moedas com PostgreSQL",
   "main": "index.js",
-  "type": "module",
+  "engines": {
+    "node": "^14.x"
+  },
   "scripts": {
     "start": "node index.js",
-    "dev": "nodemon index.js -e ejs.css.html"
+    "dev": "nodemon index.js -e js,ejs,css,html"
   },
   "repository": {
     "type": "git",
@@ -23,10 +25,12 @@
     "dotenv": "^16.0.0",
     "ejs": "^3.1.7",
     "express": "^4.18.1",
+    
     "pg": "^8.7.3",
-    "pg-hstore": "^2.3.4"
+    "pg-hstore": "^2.3.4",
+    "sequelize": "^6.19.0"
   },
-  "devDependencies": {
-    "nodemon": "^2.0.16"
-  }
+   "devDependencies": {
+   "nodemon": "^2.0.16"
+ } 
 }

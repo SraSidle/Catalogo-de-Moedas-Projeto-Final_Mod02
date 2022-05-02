@@ -1,5 +1,7 @@
-import sequelize from 'sequelize';
-import {connection} from '../database/db';
+// import sequelize from 'sequelize';
+// import connection from '../database/db';
+const sequelize = require('sequelize');
+const connection = require('../database/db');
 
 const Coin = connection.define('coin' , {
     id: {
