@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <%- include('./partials/header.ejs') %> 
+
+    <section id="">
+        <div>
+            <h2> <%= Coin.nome %> </h2>
+            <p> Coin.denomination </p>
+        </div>
+
+        <div>
+            <img id="imgF" src="<%= Coin.picture_front %>" alt="" />
+            <img id="imgB" src="<%= Coin.picture_back %> " alt="" />
+        </div>
+
+        <div>
+            <p> <%= Coin.topic %> </p>
+            <p> <%= Coin.period_ %> </p>
+            <p> <%= Coin.years  %> </p>
+            <p> <%= Coin.composition  %> </p>
+            <p> <%= Coin.typeboard %> </p>
+        </div>
+        
+
+    </section>
+
+    <%- include('./partials/footer.ejs') %> 
+    
+</body>
+</html>

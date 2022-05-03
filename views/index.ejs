@@ -1,14 +1,37 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-BR">
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title> Catálogo </title>
+   <%- include('./partials/head.ejs') %> 
 </head>
-<body>
 
-    <h1> coin.nome </h1>
-    
+<body>
+    <%- include('./partials/header.ejs') %>
+   
+<main>
+      
+   <section class="cards">
+
+   <% coins.forEach((Coin , id) => { %>
+
+          <div id="info">
+           
+            <h2> <%= Coin.nome %> </h2>     
+            <p id="ano"><%= Coin.years %></p>
+
+         </div>
+
+          <img id="imgF" src="<%= Coin.picture_front %>" alt="" />
+          <img id="imgB" src="<%= Coin.picture_back %> " alt="" />
+         
+        </div>
+
+        <div>
+           <button id="edit" type="submit"> To edit </button>
+        </div>
+
+   </section>
+
+</main> 
+   <%- include('./partials/footer.ejs') %>
 </body>
-</html>
+</html> 

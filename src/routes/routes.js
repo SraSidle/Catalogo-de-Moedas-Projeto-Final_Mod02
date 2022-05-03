@@ -1,8 +1,12 @@
 // const routes = require("express").Router();
 // import express from "express";//.Router()
 const routes = require("express").Router();
-const CoinsController = require("../controllers/CoinsController");
+const CoinController = require("../controllers/CoinController");
+const Coin = require("../models/Coin");
 
-routes.get("/" , CoinsController.getAll);
+routes.get("/" , CoinController.getAll);
+routes.get("/register" , CoinController.register);
+routes.post("/add" , CoinController.add);
+routes.get("/getById/:id/:method" , CoinController.getById);
 
-modules.export = routes;
+module.exports = routes

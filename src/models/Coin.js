@@ -3,7 +3,7 @@
 const sequelize = require('sequelize');
 const connection = require('../database/db');
 
-const Coin = connection.define('coin' , {
+const Coin = connection.define('coin', {
     id: {
         type: sequelize.INTEGER,
         autoIncrement: true,
