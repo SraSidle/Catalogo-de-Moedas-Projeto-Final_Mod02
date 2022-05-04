@@ -1,7 +1,11 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-   <%- include('./partials/head.ejs') %> 
+   <meta charset="UTF-8">
+   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <link rel="stylesheet" href="/style.css">
+   <title> Document </title>
 </head>
 
 <body>
@@ -22,16 +26,18 @@
 
           <img id="imgF" src="<%= Coin.picture_front %>" alt="" />
           <img id="imgB" src="<%= Coin.picture_back %> " alt="" />
-         
+          <a id="toEdit" href="/getById/<%= Coin.id %>/put"> To edit </a>
         </div>
 
-        <div>
-           <button id="edit" type="submit"> To edit </button>
-        </div>
+        <% }) %> 
 
    </section>
 
-</main> 
+   <% if(coinPut != null) {%> 
+      <%- include('./partials/modalPut.ejs') %> 
+   <% } %>
+
    <%- include('./partials/footer.ejs') %>
+    
 </body>
 </html> 
