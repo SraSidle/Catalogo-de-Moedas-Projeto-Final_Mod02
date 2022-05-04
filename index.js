@@ -1,22 +1,21 @@
-// require ('dotenv').config(); Dá erro
-// import dotenv from 'dotenv';
-// dontev.config();
-// import express from 'express';
-// import path from 'path';
-// import routes from './src/routes/routes.js';
+import express from "express";
+import path from "path";
+import { routes } from "./src/routes/routes.js";
+import dotenv from "dotenv";
 
-const express = require("express");
-const path = require("path");
+dotenv.config();
+
+const port = process.env.PORT || 3000;
 const app = express();
-const routes = require('./src/routes/routes.js'); 
+const __dirname = path.resolve(path.dirname(""));
 
 app.set("view engine", "ejs");
 app.use(express.static(path.join(__dirname, "public")));
-app.use(express.urlencoded());
+app.use(express.urlencoded({ extended: true }));
+app.use(express.json())
 app.use(routes);
 
-const port = process.env.PORT || 3000;
-
-app.listen(port, () =>
-  console.log(`Servidor rodando em http://localhost:${port}`)
-);
+app.listen(port, () => {
+  console.clear();
+  console.log(`Servidor rodando em http://localhost:${port}`);
+});

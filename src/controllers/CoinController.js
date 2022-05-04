@@ -1,16 +1,15 @@
-// import {Coin} from '../models/Coin';
-const Coin = require("../models/Coin");
+import { Coin } from "../models/Coin.js";
 
-const getAll = async (req, res) => {
+export const getAll = async (req, res) => {
   try {
     const coins = await Coin.findAll();
-    res.render("index", { coins, coin: undefined });
+    res.render("index", { coins, coinPut: null, coinDel: null });
   } catch (err) {
     res.status(500).send({ err: err.message });
   }
 };
 
-const register = (req, res) => {
+export const register = (req, res) => {
   try {
     res.render("register");
   } catch (err) {
@@ -18,7 +17,7 @@ const register = (req, res) => {
   }
 };
 
-const add = async (req, res) => {
+export const add = async (req, res) => {
   try {
     const coin = req.body;
 
@@ -33,7 +32,7 @@ const add = async (req, res) => {
   }
 };
 
-const getById = async (req, res) => {
+export const getById = async (req, res) => {
   try {
     const method = req.params.method;
     const coins = await Coin.findAll();
@@ -57,14 +56,12 @@ const getById = async (req, res) => {
   }
 };
 
-const update = (req , res) => {
-
-}
-
-module.exports = {
-  getAll,
-  register,
-  add,
-  getById,
-  update,
+export const update = async (req, res) => {
+  try {
+    const coin = req.body;
+    await Coin.update(coin, { where: { id: req.params.id } });
+    res.redirect("/");
+  } catch (err) {
+    res.status(500).send({ err: err.message });
+  }
 };

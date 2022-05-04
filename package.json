@@ -4,8 +4,9 @@
   "description": "Catálogo de Moedas com PostgreSQL",
   "main": "index.js",
   "engines": {
-    "node": "^14.x"
+    "node": "^14.x"   
   },
+  "type":"module",
   "scripts": {
     "start": "node index.js",
     "dev": "nodemon index.js -e js,ejs,css,html"

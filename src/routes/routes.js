@@ -1,12 +1,16 @@
-// const routes = require("express").Router();
-// import express from "express";//.Router()
-const routes = require("express").Router();
-const CoinController = require("../controllers/CoinController");
-const Coin = require("../models/Coin");
+import express from "express";
+export const routes = express.Router();
 
-routes.get("/" , CoinController.getAll);
-routes.get("/register" , CoinController.register);
-routes.post("/add" , CoinController.add);
-routes.get("/getById/:id/:method" , CoinController.getById);
+import {
+  getAll,
+  register,
+  add,
+  getById,
+  update,
+} from "../controllers/CoinController.js";
 
-module.exports = routes
+routes.get("/" , getAll);
+routes.get("/register" , register);
+routes.post("/add" , add);
+routes.get("/getById/:id/:method" , getById);
+
