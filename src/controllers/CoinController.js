@@ -2,7 +2,7 @@ import { Coin } from "../models/Coin.js";
 
 export const getAll = async (req, res) => {
   try {
-    const coins = await Coin.findAll();
+    const coins = await Coin.findAll({order: [["id" , "ASC"]]});
     res.render("index", { coins, coinPut: null, coinDel: null });
   } catch (err) {
     res.status(500).send({ err: err.message });
@@ -35,7 +35,7 @@ export const add = async (req, res) => {
 export const getById = async (req, res) => {
   try {
     const method = req.params.method;
-    const coins = await Coin.findAll();
+    const coins = await Coin.findAll({order: [["id" , "ASC"]]});
     const coin = await Coin.findByPk(req.params.id);
 
     if (method == "put") {
@@ -61,6 +61,15 @@ export const update = async (req, res) => {
     const coin = req.body;
     await Coin.update(coin, { where: { id: req.params.id } });
     res.redirect("/");
+  } catch (err) {
+    res.status(500).send({ err: err.message });
+  }
+};
+
+export const del = async (req, res) => {
+  try {
+    await Coin.destroy({ where: { id: req.params.id } });
+    res.redirect("/")
   } catch (err) {
     res.status(500).send({ err: err.message });
   }

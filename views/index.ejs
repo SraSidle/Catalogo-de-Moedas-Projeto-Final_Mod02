@@ -1,11 +1,7 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-   <meta charset="UTF-8">
-   <meta http-equiv="X-UA-Compatible" content="IE=edge">
-   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-   <link rel="stylesheet" href="/style.css">
-   <title> Document </title>
+   <%- include('./partials/head.ejs') %> 
 </head>
 
 <body>
@@ -26,7 +22,8 @@
 
           <img id="imgF" src="<%= Coin.picture_front %>" alt="" />
           <img id="imgB" src="<%= Coin.picture_back %> " alt="" />
-          <a id="toEdit" href="/getById/<%= Coin.id %>/put"> To edit </a>
+          <a id="toEdit" href="/getById/<%=Coin.id%>/put"> To edit </a>
+          <a id="delete" href="/getById/<%=Coin.id%>/delete"> Delete </a>
         </div>
 
         <% }) %> 
@@ -35,6 +32,10 @@
 
    <% if(coinPut != null) {%> 
       <%- include('./partials/modalPut.ejs') %> 
+   <% } %>
+
+   <% if(coinDel != null) {%> 
+      <%- include('./partials/modalDel.ejs') %> 
    <% } %>
 
    <%- include('./partials/footer.ejs') %>
