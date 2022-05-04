@@ -13,7 +13,9 @@
 
     <main>
       <section id="Register">
-        <% if(message != '') {%> <%= include('./partials/alerts.ejs') %> <% } %>
+        <% if(message !="") {%> 
+          <%= include('./partials/alerts.ejs') %> 
+          <% } %>
 
         <h2>Register a new currency</h2>
 

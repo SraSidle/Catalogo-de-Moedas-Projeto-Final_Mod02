@@ -8,6 +8,7 @@ import {
   getById,
   update,
   del,
+  details,
 } from "../controllers/CoinController.js";
 
 routes.get("/", getAll);
@@ -15,4 +16,5 @@ routes.get("/register", register);
 routes.post("/add", add);
 routes.get("/getById/:id/:method", getById);
 routes.post("/update/:id", update);
-routes.get("/delete/:id", del);
+routes.get("/del/:id", del);
+routes.get("/details/id:", details);
