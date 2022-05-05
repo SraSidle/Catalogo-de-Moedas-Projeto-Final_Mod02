@@ -17,19 +17,24 @@
 
    <% coins.forEach((Coin , id) => { %>
 
-          <div id="info">
-           
+      <div id="card">
+ <div id="info">           
             <h2> <%= Coin.nome %> </h2>     
             <p id="ano"><%= Coin.years %></p>
-
          </div>
 
-          <img id="imgF" src="<%= Coin.picture_front %>" alt="" />
-          <img id="imgB" src="<%= Coin.picture_back %> " alt="" />
+         <div class="img">
+            <img id="imgF" src="<%= Coin.picture_front %>" alt="" />
+           <img id="imgB" src="<%= Coin.picture_back %> " alt="" />
+         </div>
+          
+         <div>
           <a id="details" href="/views/details.ejs"> Details </a>
           <a id="toEdit" href="/getById/<%=Coin.id%>/put"> To edit </a>
           <a id="delete" href="/getById/<%=Coin.id%>/delete"> Delete </a>
         </div>
+      </div>
+         
 
         <% }) %> 
 
