@@ -1,4 +1,5 @@
 import { Coin } from "../models/Coin.js";
+import Op from "sequelize";
 
 let message = "";
 let type = "";
@@ -6,9 +7,8 @@ let type = "";
 export const getAll = async (req, res) => {
   try {
     setTimeout(() => {
-      message = "",
-      type = ""
-    }, 1000)
+      (message = ""), (type = "");
+    }, 1000);
     const coins = await Coin.findAll({ order: [["id", "ASC"]] });
     res.render("index", {
       coins,
@@ -16,6 +16,7 @@ export const getAll = async (req, res) => {
       coinDel: null,
       message,
       type,
+      coinSearch: [],
     });
   } catch (err) {
     res.status(500).send({ err: err.message });
@@ -72,6 +73,7 @@ export const getById = async (req, res) => {
         coinDel: null,
         message,
         type,
+        coinSearch: [],
       });
     } else {
       res.render("index", {
@@ -80,6 +82,7 @@ export const getById = async (req, res) => {
         coinDel: coin,
         message,
         type,
+        coinSearch: [],
       });
     }
   } catch (err) {
@@ -91,6 +94,8 @@ export const update = async (req, res) => {
   try {
     const coin = req.body;
     await Coin.update(coin, { where: { id: req.params.id } });
+    message = "Coin successfully updated!";
+    type = "success";
     res.redirect("/");
   } catch (err) {
     res.status(500).send({ err: err.message });
@@ -110,10 +115,37 @@ export const del = async (req, res) => {
 
 export const details = (req, res) => {
   try {
-    const coin = Coin.find(Coin => Coin.id == id);
-    res.render("/details/", {coin})
-
+    const coin = Coin.find((Coin) => Coin.id == id);
+    res.render("/details/", { coin });
   } catch (err) {
-
+    res.status(500).send({ err: err.message });
   }
-}
+};
+
+export const searchByName = async (req, res) => {
+  try {
+    const coin = await Coin.findAll({
+      where: {
+        nome: {
+          [Op.like]: `%${req.body.coin}%`,
+        },
+      },
+    });
+
+    if (coin.length == 0) {
+      message = "We can't find that coin.";
+      type = "warning";
+      return res.redirect("/");
+    }
+    res.render("index", {
+      coins: null,
+      coinPut: null,
+      coinDel: null,
+      message,
+      type,
+      coinSearch: coin,
+    });
+  } catch (err) {
+    res.status(500).send({ err: err.message });
+  }
+};
