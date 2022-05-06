@@ -1,5 +1,7 @@
 import { Coin } from "../models/Coin.js";
-import Op from "sequelize";
+import Sequelize from "sequelize";
+
+const Op = Sequelize.Op;
 
 let message = "";
 let type = "";
@@ -116,7 +118,7 @@ export const del = async (req, res) => {
 export const details = (req, res) => {
   try {
     const coin = Coin.find((Coin) => Coin.id == id);
-    res.render("/details/", { coin });
+    res.render("/details/id:", { coin });
   } catch (err) {
     res.status(500).send({ err: err.message });
   }
@@ -138,13 +140,14 @@ export const searchByName = async (req, res) => {
       return res.redirect("/");
     }
     res.render("index", {
-      coins: null,
+      coins: coin,
       coinPut: null,
       coinDel: null,
       message,
       type,
       coinSearch: coin,
     });
+    console.log(coin);
   } catch (err) {
     res.status(500).send({ err: err.message });
   }
