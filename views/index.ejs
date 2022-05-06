@@ -1,56 +1,58 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
-<head>
-   <%- include('./partials/head.ejs') %> 
-</head>
+  <head>
+    <%- include('./partials/head.ejs') %>
+  </head>
 
-<body>
-    <%- include('./partials/header.ejs') %>
+  <body>
+    <%- include('./partials/header.ejs') %> <% if(message == "") {%>
+    <!-- depois arrumar, ta aparecendo a estrutura html e não só o conteúdo de dentro-->
+    <%= include('./partials/alerts.ejs') %> <% } %>
 
-    <% if(message =="") {%>  <!-- depois arrumar, ta aparecendo a estrutura html e não só o conteúdo de dentro-->
-    <%= include('./partials/alerts.ejs') %> 
-    <% } %> 
-   
-<main>
-      
-   <section class="cards">
+    <main>
+      <section class="cards">
+        <% coins.forEach((Coin , id) => { %>
 
-   <% coins.forEach((Coin , id) => { %>
+        <div id="card">
+          <div class="dropdown">
 
-      <div id="card">
- <div id="info">           
-            <h2> <%= Coin.nome %> </h2>     
-            <p id="ano"><%= Coin.years %></p>
-         </div>
+            <div class="dropdown-button">
+              <i class="bi bi-three-dots-vertical"></i>
+            </div>
 
-         <div class="img">
+            <div class="dropdown-content">
+              <a id="details" href="/views/details.ejs"> Details </a>
+              <a id="toEdit" href="/getById/<%=Coin.id%>/put"> To edit </a>
+              <a id="delete" href="/getById/<%=Coin.id%>/delete"> Delete </a>
+            </div>
+
+          </div>
+
+          <div id="info">
+            <h2><%= Coin.nome %></h2>
+          </div>
+
+          <div class="img">
             <img id="imgF" src="<%= Coin.picture_front %>" alt="" />
-           <img id="imgB" src="<%= Coin.picture_back %> " alt="" />
-         </div>
-          
-         <div>
-          <a id="details" href="/views/details.ejs"> Details </a>
-          <a id="toEdit" href="/getById/<%=Coin.id%>/put"> To edit </a>
-          <a id="delete" href="/getById/<%=Coin.id%>/delete"> Delete </a>
+            <img id="imgB" src="<%= Coin.picture_back %> " alt="" />
+          </div>
+
+          <div>
+            <p><%= Coin.topic %></p>
+          </div>
+
+          <div></div>
         </div>
-      </div>
-         
 
-        <% }) %> 
+        <% }) %>
+      </section>
 
-   </section>
+      <% if(coinPut != null) {%> <%- include('./partials/modalPut.ejs') %> <% }
+      %> <% if(coinDel != null) {%> <%- include('./partials/modalDel.ejs') %> <%
+      } %>
+    </main>
+    <%- include('./partials/footer.ejs') %>
 
-   <% if(coinPut != null) {%> 
-      <%- include('./partials/modalPut.ejs') %> 
-   <% } %>
-
-   <% if(coinDel != null) {%> 
-      <%- include('./partials/modalDel.ejs') %> 
-   <% } %>
-
-   <%- include('./partials/footer.ejs') %>
-
-   <script src="/public/script.js"></script>
-    
-</body>
-</html> 
+    <script src="/script.js"></script>
+  </body>
+</html>
