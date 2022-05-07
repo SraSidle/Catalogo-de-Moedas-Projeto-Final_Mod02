@@ -27,7 +27,7 @@
 
       <section id="cards">
         <% coinSearch.forEach((coin) => {%>
-        <%- include('./partials/card.ejs', {Coin: Coin}) %>
+        <%- include('./partials/card.ejs', {Coin: coin}) %>
         <% }) %>
       </section>
 

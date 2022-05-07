@@ -118,7 +118,7 @@ export const del = async (req, res) => {
 export const details = (req, res) => {
   try {
     const coin = Coin.find((Coin) => Coin.id == id);
-    res.render("/details/id:", { coin });
+    res.render("/details/id:", { coin , message});
   } catch (err) {
     res.status(500).send({ err: err.message });
   }
