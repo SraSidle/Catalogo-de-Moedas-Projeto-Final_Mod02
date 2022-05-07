@@ -1,0 +1,26 @@
+<div id="card">
+  <div class="dropdown">
+    <div class="dropdown-button">
+      <i class="bi bi-three-dots-vertical"></i>
+    </div>
+
+    <div class="dropdown-content">
+      <a id="details" href="/views/details.ejs"> Details </a>
+      <a id="toEdit" href="/getById/<%=Coin.id%>/put"> To edit </a>
+      <a id="delete" href="/getById/<%=Coin.id%>/delete"> Delete </a>
+    </div>
+  </div>
+
+  <div id="info">
+    <h2><%= Coin.nome %></h2>
+  </div>
+
+  <div class="img">
+    <img id="imgF" src="<%= Coin.picture_front %>" alt="" />
+    <img id="imgB" src="<%= Coin.picture_back %> " alt="" />
+  </div>
+
+  <div>
+    <p><%= Coin.topic %></p>
+  </div>
+</div>
