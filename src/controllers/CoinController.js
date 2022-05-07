@@ -140,14 +140,13 @@ export const searchByName = async (req, res) => {
       return res.redirect("/");
     }
     res.render("index", {
-      coins: coin,
+      coins: null,
       coinPut: null,
       coinDel: null,
       message,
       type,
       coinSearch: coin,
     });
-    console.log(coin);
   } catch (err) {
     res.status(500).send({ err: err.message });
   }
