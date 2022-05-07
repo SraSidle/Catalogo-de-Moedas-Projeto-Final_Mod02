@@ -5,54 +5,43 @@
   </head>
 
   <body>
-    <%- include('./partials/header.ejs') %> <% if(message == "") {%>
+    <%- include('./partials/header.ejs') %>
+    <% if(message == "") {%>
     <!-- depois arrumar, ta aparecendo a estrutura html e não só o conteúdo de dentro-->
-    <%= include('./partials/alerts.ejs') %> <% } %>
+    <%= include('./partials/alerts.ejs') %>
+    <% } %>
 
     <main>
-      <section class="cards">
-        <% coins.forEach((Coin , id) => { %>
-
-        <div id="card">
-          <div class="dropdown">
-
-            <div class="dropdown-button">
-              <i class="bi bi-three-dots-vertical"></i>
-            </div>
-
-            <div class="dropdown-content">
-              <a id="details" href="/views/details.ejs"> Details </a>
-              <a id="toEdit" href="/getById/<%=Coin.id%>/put"> To edit </a>
-              <a id="delete" href="/getById/<%=Coin.id%>/delete"> Delete </a>
-            </div>
-
-          </div>
-
-          <div id="info">
-            <h2><%= Coin.nome %></h2>
-          </div>
-
-          <div class="img">
-            <img id="imgF" src="<%= Coin.picture_front %>" alt="" />
-            <img id="imgB" src="<%= Coin.picture_back %> " alt="" />
-          </div>
-
-          <div>
-            <p><%= Coin.topic %></p>
-          </div>
-
-          <div></div>
-        </div>
-
+      <section id="cards">
+        <% if(coinSearch.length == 0) { %> <% coins.forEach((Coin , id) => { %>
+        <%- include('./partials/card.ejs', {Coin: Coin}) %>
         <% }) %>
       </section>
 
-      <% if(coinPut != null) {%> <%- include('./partials/modalPut.ejs') %> <% }
-      %> <% if(coinDel != null) {%> <%- include('./partials/modalDel.ejs') %> <%
-      } %>
-    </main>
-    <%- include('./partials/footer.ejs') %>
+      <% } else { %>
 
+      <div id="result">
+        <h2>Search result</h2>
+        <a href="/">All coins</a>
+      </div>
+
+      <section id="cards">
+        <% coinSearch.forEach((coin) => {%>
+        <%- include('./partials/card.ejs', {Coin: Coin}) %>
+        <% }) %>
+      </section>
+
+      <% } %>
+      <% if(coinPut != null) {%>
+      <%- include('./partials/modalPut.ejs')%>
+      <% } %>
+      <% if(coinDel != null) {%>
+      <%- include('./partials/modalDel.ejs') %>
+      <% } %>
+
+    </main>
+
+    <%- include('./partials/footer.ejs') %>
     <script src="/script.js"></script>
   </body>
 </html>
