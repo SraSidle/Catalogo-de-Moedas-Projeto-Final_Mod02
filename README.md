@@ -1,1 +1,34 @@
-# Catalogo-de-Moedas-Projeto-Final_Mod02
+# Catálogo de moedas comemorativas do Brasil
+Esse é um catálogo de moedas, para os Numisnatas(colecionadores de moedas). Nele você poderá ver as fotos frente e verso do produto, o ano, o tópico e muitos outros detalhes!
+Além disso, é possível editar, deletar e adicionar outras moedas.
+
+## Descrição
+Projeto realizado para fins avaliativos do módulo-02, proposto pela Blue EdTech, ano de 2022.
+
+## Stacks
+Para esse projeto, foram utilizadas as ferramentas abaixo:
+   
+    EJS
+    CSS
+    JavaScript
+    PostgreSQL
+    NodeJs
+    Express
+
+<?xml version="1.0" encoding="UTF-8" standalone="no" ?>
+<svg width="256px" height="256px" viewBox="0 0 256 256" version="1.1" >
+
+<div style="display: flex" width="5rem">
+    
+   <img width="50" height="50" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/express/express-original-wordmark.svg" />       
+    <img width="50" height="50" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/postgresql/postgresql-original-wordmark.svg" />     
+    <img width="50" height="50" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nodejs/nodejs-original-wordmark.svg">
+    <img width="50" height="50" src="https://raw.githubusercontent.com/devicons/devicon/master/icons/javascript/javascript-plain.svg"/>
+    <img width="50" height="50" src="https://raw.githubusercontent.com/devicons/devicon/master/icons/css3/css3-original.svg"/>
+    <img width="50" height="50" src="https://th.bing.com/th/id/OIP.93Nj01V6ZhRWsVA0rq0CzwAAAA?pid=ImgDet&rs=1">
+</div>
+
+## Contato
+<a href="https://www.linkedin.com/in/bianca-aguiar-642811222/" target="blank">
+    <img width="50" height="50" src="https://pngimg.com/uploads/linkedIn/linkedIn_PNG38.png"/>
+</a>

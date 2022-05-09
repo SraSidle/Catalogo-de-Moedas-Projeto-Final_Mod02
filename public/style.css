@@ -8,55 +8,44 @@
 body {
   width: 100vw;
   height: auto;
-  background-color: rgb(71, 71, 71);
+  background-color: rgb(34, 34, 34);
 }
 main {
- width: 80%;
+ margin: 5% 10% 5% 10%;
 } 
 footer {
   width: 100%;
   height: 10%;
   text-align: center;
   background-color: black;
-  color: #D4AF37;;
+  color: #d4af37;
   bottom: 0;
 }
 nav {
   width: 100%;
   height: 10%;
-  margin-top: 0;
-  padding: 1.3rem;
+  padding: 1rem 0 1rem 0;
   text-decoration: none;
   background-color: black;
   top: 0;
   display: flex;
   align-items:center;
-  text-align: center; 
   flex-wrap: wrap;
-  justify-content: flex-start;}
-nav a {
+  justify-content: center;
+}
+nav a{
   display: flex;
+  justify-content: center;
   text-decoration: none;
   align-items: center;
-  color: white;
 }
-nav a img.icon{
+nav a img.icon {
   width: 4rem;
-  padding: .3rem;  
 }
-nav a h1, li a{
-        color: #D4AF37;
-color: linear-gradient(to bottom, #D4AF37 0%, #C5A028 100%);
-color: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #D4AF37), color-stop(100%, #C5A028));
-color: -webkit-linear-gradient(top, #D4AF37 0%, #C5A028 100%);
-color: -moz-linear-gradient(top, #D4AF37 0%, #C5A028 100%);
-color: -o-linear-gradient(top, #D4AF37 0%, #C5A028 100%);
-color: -ms-linear-gradient(top, #D4AF37 0%, #C5A028 100%);
-filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#D4AF37', endColorstr='#C5A028', GradientType=0);
-/* border: 1px solid #B69119;
-box-shadow: inset 0 1px 0 #E3BE46;
--webkit-box-shadow: inset 0 1px 0 #E3BE46;
--moz-box-shadow: inset 0 1px 0 #E3BE46; */
+nav a h1,
+li a {
+  color: #d4af37;
+  color: linear-gradient(to bottom, #d4af37 0%, #c5a028 100%);
 }
 nav ul {
   list-style: none;
@@ -64,50 +53,137 @@ nav ul {
   margin: 0 3rem 0 3rem;
 }
 nav ul li {
-  padding: 1rem;
+  margin: 1rem;
 }
-section.search input, button{
-  border: solid .2rem #B69119;
+section.search input,
+button {
+  border: solid 0.15rem #b69119;
   color: black;
 }
 .search input {
-  padding: 0.5rem;
+  width: auto;
   border-radius: 0.3rem;
 }
 .search button {
-  padding: 0.4rem;
+  padding: .5rem;
   border-radius: 0.3rem;
-}
-section.cards {
+ } 
+section#cards {
   display: flex;
+  justify-content: center;
   flex-wrap: wrap;
-  margin: 1rem;
 }
 div#card{
-  display: flex;
-  flex-direction:column;
-  background-image: linear-gradient(to bottom right, #D4AF37, #F2F2F2);
-  border: .1rem solid #B69119; 
-  box-shadow: .2rem .2rem .2rem .2rem #00000030;
-}
-
-div#card {
-  background-color: rgb(219, 217, 104);
-  width: 30%;
-  margin: 2rem;
+  background-image: linear-gradient(to bottom right, #0084f0, #F2F2F2);
+  border: solid .2rem #b69119;
+  width: 15rem;
   padding: 1rem;
+  margin: 1.5rem 1.5rem 1.5rem 1.5rem;
+  transition: ease-in-out 1s;
+}
+div#card:hover{
+  transform: scale(1.1);
+}
+div#flex-card{
+  height: max-content;
+  display: flex;
+  flex-direction: column;
   align-items: center;
+  justify-content: space-between;
+}
+div.img{
+  display: flex;
+  justify-content: center;
+}
+div#card div p{
+  margin: 2rem 0 .7rem 0;
+  font-weight: 500;
 }
 div.img #imgF {
-  width: 100%;
+  width: 5rem;
 }
 div.img #imgB {
   width: 5rem;
 }
-.message i {
-  color: black;
-  background-color: rgb(127, 255, 138);
+div#info h2{
+  margin: .7rem 0 .7rem 0;
 }
+section.modalPut{
+  background-color: #00000086;
+  width: 100vw;
+  height: 100vh;
+  position: fixed;
+  top: 0;
+  left: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 9999; 
+  overflow-y: auto;
+  backdrop-filter: blur(0.5rem);
+  -webkit-backdrop-filter: blur(0.5rem);
+  align-items: center;
+}
+div#modalPut{
+  width: 60%;
+  padding: 1rem;
+  background-image: linear-gradient(to bottom right, #0084f0, #F2F2F2);
+}
+form#update input{
+  padding: .1rem;
+  background-color: rgb(206, 206, 206);
+  width: 100%;
+}
+section.modalPut h3{
+ text-align: center;
+}
+.modalPut a#close-modal-put{
+  color: black;
+  font: 1rem;
+}
+.modalPut a#close-modal-put:hover{
+  transform: scale(1.2);
+}
+form#update button#update{
+  margin-top: 1rem;
+  padding: .5rem;
+  margin-left: 48%;
+  color: gray;
+  border: solid .2rem gray;
+  transition: ease-in-out 1s;
+}
+form#update button#update:hover{
+  transform: scale(1.1);
+  color: black;
+  background-color: #0084f0;
+  border: solid .2rem #b69119;
+}
+/* 
+div#modalPut{
+  width: 50%;
+  background-image: linear-gradient(to bottom right, #0084f0, #F2F2F2);;
+  margin-top: 1rem;
+}
+
+div#modalPut a i{
+ margin-left: 95%;
+ color: black;
+ font-weight: 500;
+}
+section.modalPut form#update{
+  border-radius: 1rem;
+}
+section.modalPut form#update input{
+  background-color: white;
+}
+form#update{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+form#update button#update{
+  margin-top: 1rem;
+} */
 .dropdown {
   display: flex;
   justify-content: flex-end;
@@ -119,7 +195,7 @@ div.img #imgB {
   position: relative;
 }
 .dropdown-button:hover {
-  box-shadow: 0rem 0.5rem 0rem 0.5rem #00000015;
+  box-shadow: 0rem 0.2rem 0rem 0.2rem #00000010;
 }
 .dropdown-content {
   display: none;
@@ -127,25 +203,24 @@ div.img #imgB {
   overflow: auto;
 }
 .dropdown-content a {
-  padding: .3rem;
-  margin-top: .2rem;
+  padding: 0.3rem;
+  margin-top: 0.2rem;
   text-decoration: none;
   display: flex;
   justify-content: flex-end;
   transition: all 0.3s ease-in-out;
-  border: solid .1rem #B69119;
+  border: solid 0.1rem #b69119;
   background-color: white;
   color: black;
   font-weight: 200;
 }
-.dropdown-content a:hover{
+.dropdown-content a:hover {
   transform: scale(1.1);
   font-weight: 300;
-  border: solid .1rem black;
-  background-color: #B69119;
+  border: solid 0.1rem black;
+  background-color: #b69119;
 }
-
-.modal-overlay{
+.modal-overlay {
   background-color: #00000050;
   width: 100vw;
   height: 100vh;
@@ -157,33 +232,79 @@ div.img #imgB {
   justify-content: center;
   align-items: center;
   overflow-y: auto;
-  backdrop-filter: blur( 0.5rem );
-  -webkit-backdrop-filter: blur( 0.5rem );
+  backdrop-filter: blur(0.5rem);
+  -webkit-backdrop-filter: blur(0.5rem);
 }
-div#modal-del{
+div#modal-del {
   display: flex;
-  flex-direction:column;
-  border: .15rem solid rgb(0, 0, 0);
-  background-image: linear-gradient(to bottom right, #D4AF37, #F2F2F2);
+  flex-direction: column;
+  border: 0.15rem solid rgb(0, 0, 0);
+  background-image: linear-gradient(to bottom right, #d4af37, #f2f2f2);
   padding: 3rem;
 }
-
-h3{
+h3 {
   width: 100%;
 }
-
-a#close-del i{
+a#close-del i {
   width: 100%;
 }
-.footer{
+form.form{
+ margin: 2% 10% 10% 10%;
+ padding: 1.5rem;
+ display: flex;
+ flex-wrap: wrap;
+ justify-content: center;
+ border: .2rem solid black;
+ border-radius: 1rem;
+ background-image: linear-gradient(to bottom right, #0084f0, #f2f2f2);
+ font-weight: 500;
+}
+h2#register{
+  text-align: center;
+  color:  white;
+}
+form label{
+  padding: .7rem
+}
+form input{
+  width: 100%;
+  padding: .5rem;
+  border: .2rem solid #B69119;
+  border-radius: .5rem;
+  background-color: rgb(206, 206, 206);
+  color: #D4AF37;
+  font-size: 1rem;
+}
+form button#btnadd{
+  width: 5rem;
+  padding: .7rem;
+  margin-top: 1rem;
+  transition: all ease-in-out;
+  border: solid .2rem gray;
+  border-radius: 1rem;
+  color: gray;
+}
+form button#btnadd:hover{
+  transform: scale(1.1);
+  background-color: #0084f0;
+  color: black;
+  border: solid .2rem #b69119;
+}
+section.message{
+  color: white;
+}
+.footer {
   padding: 2rem;
 }
-.author{
+.author, .source a#font{
+  color: #b69119;
+}
+.author:hover {
   color: white;
-  text-decoration: none;
 }
-.source{
-  margin-top: .7rem;
+.source a#font:hover{
+  color: white;
 }
-
-
+.source {
+  margin-top: 0.7rem;
+}
