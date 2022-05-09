@@ -20,12 +20,12 @@ Para esse projeto, foram utilizadas as ferramentas abaixo:
 
 <div style="display: flex" width="5rem">
     
-   <img width="50" height="50" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/express/express-original-wordmark.svg" />       
+   <img width="50" height="50" src="https://cdn.jsdelivr.net/gh/devicons/devicon@v2.15.1/devicon.min.css" />       
     <img width="50" height="50" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/postgresql/postgresql-original-wordmark.svg" />     
     <img width="50" height="50" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nodejs/nodejs-original-wordmark.svg">
-    <img width="50" height="50" src="https://raw.githubusercontent.com/devicons/devicon/master/icons/javascript/javascript-plain.svg"/>
-    <img width="50" height="50" src="https://raw.githubusercontent.com/devicons/devicon/master/icons/css3/css3-original.svg"/>
-    <img width="50" height="50" src="https://th.bing.com/th/id/OIP.93Nj01V6ZhRWsVA0rq0CzwAAAA?pid=ImgDet&rs=1">
+    <img width="50" height="50" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg"/>
+    <img width="50" height="50" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original-wordmark.svg" />
+    <img width="50" height="50" src=https://photovoltaikbuero.de/wp-content/uploads/2017/11/ejs-logo.jpg>
 </div>
 
 ## Contato
