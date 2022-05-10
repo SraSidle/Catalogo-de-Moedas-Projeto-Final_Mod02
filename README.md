@@ -15,17 +15,13 @@ Para esse projeto, foram utilizadas as ferramentas abaixo:
     NodeJs
     Express
 
-<?xml version="1.0" encoding="UTF-8" standalone="no" ?>
-<svg width="256px" height="256px" viewBox="0 0 256 256" version="1.1" >
-
 <div style="display: flex" width="5rem">
-    
-   <img width="50" height="40" src="https://cdn.jsdelivr.net/gh/devicons/devicon@v2.15.1/devicon.min.css" />       
-    <img width="50" height="50" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/postgresql/postgresql-original-wordmark.svg" />     
-    <img width="50" height="40" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nodejs/nodejs-original-wordmark.svg">
-    <img width="50" height="40" src="https://img.icons8.com/color/48/000000/javascript--v1.png"/>
-    <img width="50" height="50" src="https://img.icons8.com/color/48/000000/css3.png"/>
-    <img width="50" height="50" src="https://img.icons8.com/color/48/000000/html-5--v2.png">
+    <img width="60" height="60" src="https://img.icons8.com/color/48/000000/html-5--v2.png"> 
+    <img width="60" height="60" src="https://img.icons8.com/color/48/000000/css3.png"/>
+    <img width="60" height="60" src="https://img.icons8.com/color/48/000000/javascript--v1.png"/>
+    <img width="60" height="60" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/postgresql/postgresql-original-wordmark.svg" />     
+    <img width="60" height="60" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nodejs/nodejs-original-wordmark.svg">
+
 </div>
 
 ## Contato
