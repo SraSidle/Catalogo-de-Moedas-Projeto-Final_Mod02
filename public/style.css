@@ -11,8 +11,8 @@ body {
   background-color: rgb(34, 34, 34);
 }
 main {
- margin: 5% 10% 5% 10%;
-} 
+  margin: 5% 10% 5% 10%;
+}
 footer {
   width: 100%;
   height: 10%;
@@ -29,11 +29,11 @@ nav {
   background-color: black;
   top: 0;
   display: flex;
-  align-items:center;
+  align-items: center;
   flex-wrap: wrap;
   justify-content: center;
 }
-nav a{
+nav a {
   display: flex;
   justify-content: center;
   text-decoration: none;
@@ -65,38 +65,38 @@ button {
   border-radius: 0.3rem;
 }
 .search button {
-  padding: .5rem;
+  padding: 0.5rem;
   border-radius: 0.3rem;
- } 
+}
 section#cards {
   display: flex;
   justify-content: center;
   flex-wrap: wrap;
 }
-div#card{
-  background-image: linear-gradient(to bottom right, #0084f0, #F2F2F2);
-  border: solid .2rem #b69119;
+div#card {
+  background-image: linear-gradient(to bottom right, #0084f0, #f2f2f2);
+  border: solid 0.2rem #b69119;
   width: 15rem;
   padding: 1rem;
   margin: 1.5rem 1.5rem 1.5rem 1.5rem;
   transition: ease-in-out 1s;
 }
-div#card:hover{
+div#card:hover {
   transform: scale(1.1);
 }
-div#flex-card{
+div#flex-card {
   height: max-content;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: space-between;
 }
-div.img{
+div.img {
   display: flex;
   justify-content: center;
 }
-div#card div p{
-  margin: 2rem 0 .7rem 0;
+div#card div p {
+  margin: 2rem 0 0.7rem 0;
   font-weight: 500;
 }
 div.img #imgF {
@@ -105,10 +105,10 @@ div.img #imgF {
 div.img #imgB {
   width: 5rem;
 }
-div#info h2{
-  margin: .7rem 0 .7rem 0;
+div#info h2 {
+  margin: 0.7rem 0 0.7rem 0;
 }
-section.modalPut{
+section.modalPut {
   background-color: #00000086;
   width: 100vw;
   height: 100vh;
@@ -118,72 +118,46 @@ section.modalPut{
   display: flex;
   justify-content: center;
   align-items: center;
-  z-index: 9999; 
+  z-index: 9999;
   overflow-y: auto;
   backdrop-filter: blur(0.5rem);
   -webkit-backdrop-filter: blur(0.5rem);
   align-items: center;
 }
-div#modalPut{
+div#modalPut {
   width: 60%;
   padding: 1rem;
-  background-image: linear-gradient(to bottom right, #0084f0, #F2F2F2);
+  background-image: linear-gradient(to bottom right, #0084f0, #f2f2f2);
 }
-form#update input{
-  padding: .1rem;
+form#update input {
+  padding: 0.1rem;
   background-color: rgb(206, 206, 206);
   width: 100%;
 }
-section.modalPut h3{
- text-align: center;
+section.modalPut h3 {
+  text-align: center;
 }
-.modalPut a#close-modal-put{
+.modalPut a#close-modal-put {
   color: black;
   font: 1rem;
 }
-.modalPut a#close-modal-put:hover{
+.modalPut a#close-modal-put:hover {
   transform: scale(1.2);
 }
-form#update button#update{
+form#update button#update {
   margin-top: 1rem;
-  padding: .5rem;
+  padding: 0.5rem;
   margin-left: 48%;
   color: gray;
-  border: solid .2rem gray;
+  border: solid 0.2rem gray;
   transition: ease-in-out 1s;
 }
-form#update button#update:hover{
+form#update button#update:hover {
   transform: scale(1.1);
   color: black;
   background-color: #0084f0;
-  border: solid .2rem #b69119;
+  border: solid 0.2rem #b69119;
 }
-/* 
-div#modalPut{
-  width: 50%;
-  background-image: linear-gradient(to bottom right, #0084f0, #F2F2F2);;
-  margin-top: 1rem;
-}
-
-div#modalPut a i{
- margin-left: 95%;
- color: black;
- font-weight: 500;
-}
-section.modalPut form#update{
-  border-radius: 1rem;
-}
-section.modalPut form#update input{
-  background-color: white;
-}
-form#update{
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-}
-form#update button#update{
-  margin-top: 1rem;
-} */
 .dropdown {
   display: flex;
   justify-content: flex-end;
@@ -238,71 +212,109 @@ form#update button#update{
 div#modal-del {
   display: flex;
   flex-direction: column;
-  border: 0.15rem solid rgb(0, 0, 0);
-  background-image: linear-gradient(to bottom right, #d4af37, #f2f2f2);
-  padding: 3rem;
+  border: 0.08rem solid rgb(0, 0, 0);
+  background-image: linear-gradient(to bottom right, #0084f0, #f2f2f2);
+  padding: 1rem 3rem 3rem 1.5rem;
+}
+div a#closeDel {
+  font-weight: 1000;
+  color: black;
+}
+div#escolha p {
+  margin-bottom: 2rem;
+  font-weight: 500;
+}
+div#escolha a {
+  text-decoration: none;
+  border: solid 0.15rem black;
+  border-radius: 0.4rem;
+  background-color: rgb(206, 206, 206);
+  margin-left: 20%;
+  transition: ease-in-out 1s;
+}
+div a#no {
+  color: rgb(179, 13, 13);
+  margin-left: 25%;
+  padding: 0.4rem 0.7rem 0.4rem 0.7rem;
+}
+div a#yes {
+  color: rgb(11, 94, 11);
+  margin-left: 20%;
+  padding: 0.4rem 0.6rem 0.4rem 0.6rem;
+}
+div a#no:hover {
+  color: rgb(206, 206, 206);
+  background-color: rgb(179, 13, 13);
+  transform: scale(1.1);
+}
+div a#yes:hover {
+  background-color: rgb(53, 248, 53);
+  color: rgb(206, 206, 206);
+  transform: scale(1.1);
 }
 h3 {
   width: 100%;
+  text-align: center;
 }
 a#close-del i {
-  width: 100%;
+  text-align: start;
 }
-form.form{
- margin: 2% 10% 10% 10%;
- padding: 1.5rem;
- display: flex;
- flex-wrap: wrap;
- justify-content: center;
- border: .2rem solid black;
- border-radius: 1rem;
- background-image: linear-gradient(to bottom right, #0084f0, #f2f2f2);
- font-weight: 500;
+form.form {
+  margin: 2% 10% 10% 10%;
+  padding: 1.5rem;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  border: 0.2rem solid black;
+  border-radius: 1rem;
+  background-image: linear-gradient(to bottom right, #0084f0, #f2f2f2);
+  font-weight: 500;
 }
-h2#register{
+h2#register {
   text-align: center;
-  color:  white;
+  color: white;
 }
-form label{
-  padding: .7rem
+form label {
+  padding: 0.7rem;
 }
-form input{
+form input {
   width: 100%;
-  padding: .5rem;
-  border: .2rem solid #B69119;
-  border-radius: .5rem;
+  padding: 0.5rem;
+  border: 0.2rem solid #b69119;
+  border-radius: 0.5rem;
   background-color: rgb(206, 206, 206);
-  color: #D4AF37;
+  color: #d4af37;
   font-size: 1rem;
 }
-form button#btnadd{
+form button#btnadd {
   width: 5rem;
-  padding: .7rem;
+  padding: 0.7rem;
   margin-top: 1rem;
   transition: all ease-in-out;
-  border: solid .2rem gray;
+  border: solid 0.2rem gray;
   border-radius: 1rem;
   color: gray;
 }
-form button#btnadd:hover{
+form button#btnadd:hover {
   transform: scale(1.1);
   background-color: #0084f0;
   color: black;
-  border: solid .2rem #b69119;
+  border: solid 0.2rem #b69119;
 }
-section.message{
+section.message {
   color: white;
 }
 .footer {
   padding: 2rem;
 }
-.author, .source a#font{
+.author,
+.source a#font {
   color: #b69119;
 }
 .author:hover {
   color: white;
 }
-.source a#font:hover{
+.source a#font:hover {
   color: white;
 }
 .source {

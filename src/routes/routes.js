@@ -18,5 +18,5 @@ routes.post("/add", add);
 routes.get("/getById/:id/:method", getById);
 routes.post("/update/:id", update);
 routes.get("/del/:id", del);
-routes.get("/details/id:", details);
+routes.get("/details/:id", details);
 routes.post("/search", searchByName);

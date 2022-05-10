@@ -5,13 +5,13 @@
     </div>
 
     <div class="dropdown-content">
-      <a id="details" href="/views/details.ejs"> Details </a>
+      <a id="details" href="/details/id:<%=Coin.id%>"> Details </a>
       <a id="toEdit" href="/getById/<%=Coin.id%>/put"> To edit </a>
       <a id="delete" href="/getById/<%=Coin.id%>/delete"> Delete </a>
     </div>
   </div>
 
-  <div id="info">
+    <div id="info">
     <h2><%= Coin.nome %></h2>
   </div>
 
@@ -23,4 +23,7 @@
   <div>
     <p><%= Coin.topic %></p>
   </div>
+
+  
+
 </div>

@@ -1,14 +1,11 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-Br">
   <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="/style.css" />
-    <title>Document</title>
+    <%- include('./partials/head.ejs') %>
   </head>
 
-  <body>
+
+  <body class="register">
     <%- include('./partials/header.ejs') %>
 
     <main>
@@ -17,9 +14,9 @@
           <%= include('./partials/alerts.ejs') %> 
           <% } %>
 
-        <h2>Register a new currency</h2>
+        <h2 id="register">Register a new currency</h2>
 
-        <form action="/add" method="POST">
+        <form action="/add" method="POST" class="form">
           <label for="nome"> Name: </label>
           <input type="text" id="nome" name="nome" required />
 
@@ -44,7 +41,7 @@
           <label for="picture_front">front image link</label>
           <input tipe="text" id="picture_front" name="picture_front" required />
 
-          <label for="picture_back">behind image link=</label>
+          <label for="picture_back">behind image link</label>
           <input type="text" id="picture_back" name="picture_back" required />
 
           <button id="btnadd" type="submit">Register</button>

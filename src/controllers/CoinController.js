@@ -3,7 +3,7 @@ import Sequelize from "sequelize";
 
 const Op = Sequelize.Op;
 
-let message = "";
+export let message = "";
 let type = "";
 
 export const getAll = async (req, res) => {
@@ -115,10 +115,10 @@ export const del = async (req, res) => {
   }
 };
 
-export const details = (req, res) => {
+export const details = async (req, res) => {
   try {
-    const coin = Coin.find((Coin) => Coin.id == id);
-    res.render("/details/id:", { coin , message});
+    const coin = await Coin.findByPk(req.params.id)
+    res.render("/details/:id", { coin , message});
   } catch (err) {
     res.status(500).send({ err: err.message });
   }
