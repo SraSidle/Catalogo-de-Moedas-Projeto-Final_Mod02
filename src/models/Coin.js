@@ -54,3 +54,9 @@ export const Coin = connection.define(
     updateAt: false,
   }
 );
+
+export const initTable = async () => {
+  await Coin.sync();
+}
+
+initTable();
