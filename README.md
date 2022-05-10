@@ -23,9 +23,9 @@ Para esse projeto, foram utilizadas as ferramentas abaixo:
    <img width="50" height="40" src="https://cdn.jsdelivr.net/gh/devicons/devicon@v2.15.1/devicon.min.css" />       
     <img width="50" height="50" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/postgresql/postgresql-original-wordmark.svg" />     
     <img width="50" height="40" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nodejs/nodejs-original-wordmark.svg">
-    <img width="50" height="40" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg"/>
-    <img width="50" height="50" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original-wordmark.svg" />
-    <img width="50" height="50" src="https://ejs.bootcss.com/assets/images/ejs-logo.png">
+    <img width="50" height="40" src="https://img.icons8.com/color/48/000000/javascript--v1.png"/>
+    <img width="50" height="50" src="https://img.icons8.com/color/48/000000/css3.png"/>
+    <img width="50" height="50" src="https://img.icons8.com/color/48/000000/html-5--v2.png">
 </div>
 
 ## Contato
