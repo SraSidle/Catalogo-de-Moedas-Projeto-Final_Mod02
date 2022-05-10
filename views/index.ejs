@@ -7,7 +7,7 @@
   <body>
     <%- include('./partials/header.ejs') %>
     
-    <% if(message == "") {%>
+    <% if(message != "") {%>
     <%= include('./partials/alerts.ejs') %>
     <% } %>
 
@@ -22,7 +22,6 @@
 
       <div id="result">
         <h2>Search result</h2>
-        <a href="/">All coins</a>
       </div>
 
       <section id="cards">

@@ -5,7 +5,7 @@
     </div>
 
     <div class="dropdown-content">
-      <a id="details" href="/details/id:<%=Coin.id%>"> Details </a>
+      <a id="details" href="/details/<%=Coin.id%>"> Details </a>
       <a id="toEdit" href="/getById/<%=Coin.id%>/put"> To edit </a>
       <a id="delete" href="/getById/<%=Coin.id%>/delete"> Delete </a>
     </div>
@@ -23,7 +23,5 @@
   <div>
     <p><%= Coin.topic %></p>
   </div>
-
-  
 
 </div>

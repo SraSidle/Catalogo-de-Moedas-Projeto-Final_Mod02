@@ -7,23 +7,23 @@
 <body>
     <%- include('./partials/header.ejs') %> 
 
-    <section href="/details/id:" id="">
+    <section href="/details/id:" id="details">
         <div>
-            <h2> <%= Coin.nome %> </h2>
-            <p> Coin.denomination </p>
+            <h2> Name: <%= coin.nome %> </h2>
+            <p> Denomination: <%= coin.denomination %> </p>
         </div>
 
         <div>
-            <img id="imgF" src="<%= Coin.picture_front %>" alt="" />
-            <img id="imgB" src="<%= Coin.picture_back %> " alt="" />
+            <img id="imgF" src="<%= coin.picture_front %>" alt="" />
+            <img id="imgB" src="<%= coin.picture_back %> " alt="" />
         </div>
 
         <div>
-            <p> <%= Coin.topic %> </p>
-            <p> <%= Coin.period_ %> </p>
-            <p> <%= Coin.years  %> </p>
-            <p> <%= Coin.composition  %> </p>
-            <p> <%= Coin.typeboard %> </p>
+            <p> Topic: <%= coin.topic %> </p>
+            <p> Period: <%= coin.period_ %> </p>
+            <p> Year: <%= coin.years  %> </p>
+            <p> Composition: <%= coin.composition  %> </p>
+            <p> typeboard: <%= coin.typeboard %> </p>
         </div>
         
 

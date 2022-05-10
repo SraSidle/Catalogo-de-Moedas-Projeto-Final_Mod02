@@ -118,7 +118,7 @@ export const del = async (req, res) => {
 export const details = async (req, res) => {
   try {
     const coin = await Coin.findByPk(req.params.id)
-    res.render("/details/:id", { coin , message});
+    res.render("details", { coin , message});
   } catch (err) {
     res.status(500).send({ err: err.message });
   }
